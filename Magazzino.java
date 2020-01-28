@@ -56,7 +56,7 @@ public class Magazzino extends JFrame {
 		setResizable(false);
 		setTitle("Magazzino");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 861, 492);
+		setBounds(100, 100, 853, 649);
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.activeCaption);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -65,76 +65,76 @@ public class Magazzino extends JFrame {
 		
 		JLabel lblNome = new JLabel("Nome");
 		lblNome.setFont(new Font("Impact", Font.PLAIN, 12));
-		lblNome.setBounds(51, 52, 77, 14);
+		lblNome.setBounds(34, 174, 77, 14);
 		contentPane.add(lblNome);
 		
 		JLabel lblColore = new JLabel("Colore");
 		lblColore.setFont(new Font("Impact", Font.PLAIN, 12));
-		lblColore.setBounds(51, 98, 77, 14);
+		lblColore.setBounds(34, 220, 77, 14);
 		contentPane.add(lblColore);
 		
 		JLabel lblTaglia = new JLabel("Taglia");
 		lblTaglia.setFont(new Font("Impact", Font.PLAIN, 12));
-		lblTaglia.setBounds(51, 141, 77, 14);
+		lblTaglia.setBounds(34, 263, 77, 14);
 		contentPane.add(lblTaglia);
 		
 		JLabel lblPrezzo = new JLabel("Prezzo");
 		lblPrezzo.setFont(new Font("Impact", Font.PLAIN, 12));
-		lblPrezzo.setBounds(51, 180, 77, 14);
+		lblPrezzo.setBounds(34, 302, 77, 14);
 		contentPane.add(lblPrezzo);
 		
 		textField = new JTextField();
-		textField.setBounds(148, 50, 156, 20);
+		textField.setBounds(131, 172, 156, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(148, 96, 156, 20);
+		textField_1.setBounds(131, 218, 156, 20);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(148, 139, 156, 20);
+		textField_2.setBounds(131, 261, 156, 20);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
 		textField_3 = new JTextField();
-		textField_3.setBounds(148, 178, 156, 20);
+		textField_3.setBounds(131, 300, 156, 20);
 		contentPane.add(textField_3);
 		textField_3.setColumns(10);
 		
 		textField_4 = new JTextField();
-		textField_4.setBounds(150, 219, 156, 20);
+		textField_4.setBounds(133, 341, 156, 20);
 		contentPane.add(textField_4);
 		textField_4.setColumns(10);
 		
 		JLabel lblCodprodotto = new JLabel("CodProdotto");
 		lblCodprodotto.setFont(new Font("Impact", Font.PLAIN, 12));
-		lblCodprodotto.setBounds(51, 221, 92, 14);
+		lblCodprodotto.setBounds(34, 343, 92, 14);
 		contentPane.add(lblCodprodotto);
 		
 		JButton btnInserisci = new JButton("INSERISCI");
 		btnInserisci.setBackground(new Color(0, 255, 0));
-		btnInserisci.setBounds(27, 414, 103, 23);
+		btnInserisci.setBounds(10, 518, 103, 23);
 		contentPane.add(btnInserisci);
 		
 		JButton btnElimina = new JButton("ELIMINA");
 		btnElimina.setBackground(new Color(255, 0, 0));
-		btnElimina.setBounds(138, 414, 103, 23);
+		btnElimina.setBounds(121, 518, 103, 23);
 		contentPane.add(btnElimina);
 		
 		JButton btnAggiorna = new JButton("AGGIORNA");
 		btnAggiorna.setBackground(new Color(30, 144, 255));
-		btnAggiorna.setBounds(252, 414, 103, 23);
+		btnAggiorna.setBounds(235, 518, 103, 23);
 		contentPane.add(btnAggiorna);
 		
 		JLabel lblNote = new JLabel("Note");
 		lblNote.setFont(new Font("Impact", Font.PLAIN, 12));
-		lblNote.setBounds(51, 272, 77, 14);
+		lblNote.setBounds(34, 385, 77, 14);
 		contentPane.add(lblNote);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(49, 306, 245, 94);
+		scrollPane.setBounds(32, 410, 245, 94);
 		contentPane.add(scrollPane);
 		
 		JTextArea textArea = new JTextArea();
@@ -143,7 +143,7 @@ public class Magazzino extends JFrame {
 		textArea.setLineWrap(true);
 		
 		JScrollPane scrollPane_1 = new JScrollPane();
-		scrollPane_1.setBounds(393, 52, 452, 381);
+		scrollPane_1.setBounds(370, 174, 452, 367);
 		contentPane.add(scrollPane_1);
 		
 		table = new JTable();
@@ -179,7 +179,13 @@ public class Magazzino extends JFrame {
 		
 		JLabel lblMagazzino = new JLabel("Magazzino");
 		lblMagazzino.setFont(new Font("Impact", Font.PLAIN, 15));
-		lblMagazzino.setBounds(394, 11, 77, 14);
+		lblMagazzino.setBounds(370, 149, 77, 14);
 		contentPane.add(lblMagazzino);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(SystemColor.textHighlight);
+		panel.setBounds(0, 0, 847, 138);
+		contentPane.add(panel);
+		panel.setLayout(null);
 	}
 }
