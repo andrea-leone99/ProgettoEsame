@@ -14,6 +14,8 @@ import javax.swing.JTable;
 import javax.swing.JTextPane;
 import javax.swing.JScrollBar;
 import javax.swing.JTextArea;
+import javax.swing.table.DefaultTableModel;
+import java.awt.Font;
 
 public class Magazzino extends JFrame {
 
@@ -23,6 +25,7 @@ public class Magazzino extends JFrame {
 	private JTextField textField_2;
 	private JTextField textField_3;
 	private JTextField textField_4;
+	private JTable table;
 
 	
 	
@@ -53,7 +56,7 @@ public class Magazzino extends JFrame {
 		setResizable(false);
 		setTitle("Magazzino");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 729, 492);
+		setBounds(100, 100, 861, 492);
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.activeCaption);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -61,48 +64,53 @@ public class Magazzino extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNome = new JLabel("Nome");
+		lblNome.setFont(new Font("Impact", Font.PLAIN, 12));
 		lblNome.setBounds(51, 52, 77, 14);
 		contentPane.add(lblNome);
 		
 		JLabel lblColore = new JLabel("Colore");
+		lblColore.setFont(new Font("Impact", Font.PLAIN, 12));
 		lblColore.setBounds(51, 98, 77, 14);
 		contentPane.add(lblColore);
 		
 		JLabel lblTaglia = new JLabel("Taglia");
+		lblTaglia.setFont(new Font("Impact", Font.PLAIN, 12));
 		lblTaglia.setBounds(51, 141, 77, 14);
 		contentPane.add(lblTaglia);
 		
 		JLabel lblPrezzo = new JLabel("Prezzo");
+		lblPrezzo.setFont(new Font("Impact", Font.PLAIN, 12));
 		lblPrezzo.setBounds(51, 180, 77, 14);
 		contentPane.add(lblPrezzo);
 		
 		textField = new JTextField();
-		textField.setBounds(138, 49, 156, 20);
+		textField.setBounds(148, 50, 156, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(138, 95, 156, 20);
+		textField_1.setBounds(148, 96, 156, 20);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(138, 138, 156, 20);
+		textField_2.setBounds(148, 139, 156, 20);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
 		textField_3 = new JTextField();
-		textField_3.setBounds(138, 177, 156, 20);
+		textField_3.setBounds(148, 178, 156, 20);
 		contentPane.add(textField_3);
 		textField_3.setColumns(10);
 		
 		textField_4 = new JTextField();
-		textField_4.setBounds(138, 218, 156, 20);
+		textField_4.setBounds(150, 219, 156, 20);
 		contentPane.add(textField_4);
 		textField_4.setColumns(10);
 		
 		JLabel lblCodprodotto = new JLabel("CodProdotto");
-		lblCodprodotto.setBounds(51, 221, 77, 14);
+		lblCodprodotto.setFont(new Font("Impact", Font.PLAIN, 12));
+		lblCodprodotto.setBounds(51, 221, 92, 14);
 		contentPane.add(lblCodprodotto);
 		
 		JButton btnInserisci = new JButton("INSERISCI");
@@ -121,6 +129,7 @@ public class Magazzino extends JFrame {
 		contentPane.add(btnAggiorna);
 		
 		JLabel lblNote = new JLabel("Note");
+		lblNote.setFont(new Font("Impact", Font.PLAIN, 12));
 		lblNote.setBounds(51, 272, 77, 14);
 		contentPane.add(lblNote);
 		
@@ -132,5 +141,45 @@ public class Magazzino extends JFrame {
 		scrollPane.setViewportView(textArea);
 		textArea.setWrapStyleWord(true);
 		textArea.setLineWrap(true);
+		
+		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(393, 52, 452, 381);
+		contentPane.add(scrollPane_1);
+		
+		table = new JTable();
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+			},
+			new String[] {
+				"Nome", "Colore", "Taglia", "Prezzo", "CodProdotto"
+			}
+		));
+		scrollPane_1.setViewportView(table);
+		
+		JLabel lblMagazzino = new JLabel("Magazzino");
+		lblMagazzino.setFont(new Font("Impact", Font.PLAIN, 15));
+		lblMagazzino.setBounds(394, 11, 77, 14);
+		contentPane.add(lblMagazzino);
 	}
 }
