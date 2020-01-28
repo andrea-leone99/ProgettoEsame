@@ -9,6 +9,11 @@ import javax.swing.JTextField;
 import java.awt.SystemColor;
 import javax.swing.JButton;
 import java.awt.Color;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextPane;
+import javax.swing.JScrollBar;
+import javax.swing.JTextArea;
 
 public class Magazzino extends JFrame {
 
@@ -45,9 +50,10 @@ public class Magazzino extends JFrame {
 	 * Create the frame.
 	 */
 	public Magazzino() {
+		setResizable(false);
 		setTitle("Magazzino");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 683, 492);
+		setBounds(100, 100, 729, 492);
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.activeCaption);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -101,17 +107,30 @@ public class Magazzino extends JFrame {
 		
 		JButton btnInserisci = new JButton("INSERISCI");
 		btnInserisci.setBackground(new Color(0, 255, 0));
-		btnInserisci.setBounds(25, 402, 103, 23);
+		btnInserisci.setBounds(27, 414, 103, 23);
 		contentPane.add(btnInserisci);
 		
 		JButton btnElimina = new JButton("ELIMINA");
 		btnElimina.setBackground(new Color(255, 0, 0));
-		btnElimina.setBounds(138, 402, 103, 23);
+		btnElimina.setBounds(138, 414, 103, 23);
 		contentPane.add(btnElimina);
 		
 		JButton btnAggiorna = new JButton("AGGIORNA");
 		btnAggiorna.setBackground(new Color(30, 144, 255));
-		btnAggiorna.setBounds(250, 402, 103, 23);
+		btnAggiorna.setBounds(252, 414, 103, 23);
 		contentPane.add(btnAggiorna);
+		
+		JLabel lblNote = new JLabel("Note");
+		lblNote.setBounds(51, 272, 77, 14);
+		contentPane.add(lblNote);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(49, 306, 245, 94);
+		contentPane.add(scrollPane);
+		
+		JTextArea textArea = new JTextArea();
+		scrollPane.setViewportView(textArea);
+		textArea.setWrapStyleWord(true);
+		textArea.setLineWrap(true);
 	}
 }
