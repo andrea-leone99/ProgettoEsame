@@ -4,15 +4,20 @@ import javax.swing.JFrame;
 import java.awt.SystemColor;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+
+import GestoreEmail.GuiGestione;
+
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Login {
 
 	private JFrame frmLogin;
-	private JTextField textField;
-	private JPasswordField passwordField;
+	private JTextField Username;
+	private JPasswordField Password;
 
 	
 	
@@ -70,10 +75,10 @@ public class Login {
 		lblLogoPng.setBounds(30, 60, 186, 166);
 		frmLogin.getContentPane().add(lblLogoPng);
 		
-		textField = new JTextField();
-		textField.setBounds(347, 65, 145, 20);
-		frmLogin.getContentPane().add(textField);
-		textField.setColumns(10);
+		Username = new JTextField();
+		Username.setBounds(347, 65, 145, 20);
+		frmLogin.getContentPane().add(Username);
+		Username.setColumns(10);
 		
 		JLabel lblUsername = new JLabel("Username");
 		lblUsername.setFont(new Font("Impact", Font.PLAIN, 12));
@@ -86,13 +91,45 @@ public class Login {
 		frmLogin.getContentPane().add(lblPassword);
 		
 		JButton btnLogin = new JButton("Login");
+		btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//codice del metodo
+				
+				String uname=Username.getText();
+				String psd=Password.getText();
+				
+				if(uname.equals("marco99") && psd.equals("pass_marco99")) {
+					new AdminPanel().setVisible(true);
+				}
+					else if(uname.equals("chiara_03") && psd.equals("chiararossi02")) {
+						new AdminPanel().setVisible(true);
+					}
+				
+					else if(uname.equals("paolotrattore") && psd.equals("paolotratt")) {
+						new AdminPanel().setVisible(true);
+					}
+				
+					else if(uname.equals("dom02_") && psd.equals("123456_*")) {
+						new AdminPanel().setVisible(true);
+					}
+				
+					else if(uname.equals("Mario_Verdi") && psd.equals("admin_mario93")) {
+						new AdminPanel().setVisible(true);
+					}
+				
+				   //implementazione jdialog
+				
+					
+				
+			}//fine metodo del bottone login 
+		});
 		btnLogin.setFont(new Font("Impact", Font.PLAIN, 12));
 		btnLogin.setBounds(360, 192, 132, 34);
 		frmLogin.getContentPane().add(btnLogin);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(347, 133, 145, 20);
-		frmLogin.getContentPane().add(passwordField);
+		Password = new JPasswordField();
+		Password.setBounds(347, 133, 145, 20);
+		frmLogin.getContentPane().add(Password);
 		
 		JLabel lblInserireUsernameE = new JLabel("Inserire username e password per accedere");
 		lblInserireUsernameE.setFont(new Font("Impact", Font.PLAIN, 12));
