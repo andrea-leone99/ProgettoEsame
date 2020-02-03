@@ -18,6 +18,8 @@ public class Login {
 	
 	
 	
+	
+	
 	/**
 	 * Launch the application.
 	 */
@@ -38,6 +40,8 @@ public class Login {
 	
 	
 	
+	
+	
 	/**
 	 * Create the application.
 	 */
@@ -48,15 +52,18 @@ public class Login {
 	
 	
 	
+	
+	
+	
 	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
 		frmLogin = new JFrame();
+		frmLogin.setResizable(false);
 		frmLogin.getContentPane().setBackground(SystemColor.activeCaption);
 		frmLogin.setTitle("Login");
 		frmLogin.setBounds(100, 100, 551, 326);
-		frmLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmLogin.getContentPane().setLayout(null);
 		
 		JLabel lblLogoPng = new JLabel("Logo png");

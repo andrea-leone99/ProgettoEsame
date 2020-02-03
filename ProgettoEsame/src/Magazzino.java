@@ -49,6 +49,8 @@ public class Magazzino extends JFrame {
 	
 	
 	
+	
+	
 	/**
 	 * Create the frame.
 	 */
